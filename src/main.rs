@@ -190,24 +190,6 @@ fn contact() -> Html {
     }
 }
 
-#[function_component(App)]
-fn app() -> Html {
-    html! {
-        <main class="page">
-            <Navbar />
-            <Hero />
-            <Categories />
-            <About />
-            <Contact />
-            <Footer />
-        </main>
-    }
-}
-
-fn main() {
-    yew::Renderer::<App>::new().render();
-}
-
 #[function_component(Footer)]
 fn footer() -> Html {
     html! {
@@ -245,4 +227,22 @@ fn footer() -> Html {
             </div>
         </footer>
     }
+}
+
+#[function_component(App)]
+fn app() -> Html {
+    html! {
+        <main class="page">
+            <Navbar />
+            <Hero />
+            <Categories />
+            <About />
+            <Contact />
+            <Footer />
+        </main>
+    }
+}
+
+fn main() {
+    yew::Renderer::<App>::new().render();
 }
