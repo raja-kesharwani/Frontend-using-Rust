@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Men</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #f8f8f7;
+        color: #0b1009;
+        font-family: Arial, Helvetica, sans-serif;
+        min-height: 100vh;
+        padding: 64px 24px;
+        display: grid;
+        place-items: center;
+      }
+
+      main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+
+      .product-card {
+        background: #fff;
+        border: 1px solid rgba(69, 85, 75, 0.14);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 14px 32px rgba(11, 16, 9, 0.08);
+      }
+
+      .image-box {
+        aspect-ratio: 4 / 3;
+        background: #d8d1cd;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .product-info {
+        min-height: 86px;
+        padding: 16px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      h2 {
+        font-size: 18px;
+        line-height: 1.25;
+      }
+
+      p {
+        color: #b96039;
+        font-size: 17px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 900px) {
+        main {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 560px) {
+        body {
+          padding: 32px 14px;
+        }
+
+        main {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="product-card">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=900&q=80" alt="Relaxed utility jacket" />
+        </div>
+        <div class="product-info">
+          <h2>Relaxed Utility Jacket</h2>
+          <p>₹5000</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=900&q=80" alt="Oxford shirt" />
+        </div>
+        <div class="product-info">
+          <h2>Oxford Shirt</h2>
+          <p>₹3500</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=900&q=80" alt="Slim chino trouser" />
+        </div>
+        <div class="product-info">
+          <h2>Slim Chino Trouser</h2>
+          <p>₹2450</p>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
